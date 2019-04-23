@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AGL.SortCat.Models
+namespace AGL.Sortcat.Utility
 {
-    public class Class1
+    public class Logging
     {
     }
 }
