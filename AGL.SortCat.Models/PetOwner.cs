@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AGL.SortCat.Models
 {
-    class PetOwner
+    public class PetOwner
     {
         [JsonProperty("name")]
         public string Name { get; set; }

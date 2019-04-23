@@ -41,7 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOwnerRepo.cs" />
+    <Compile Include="OwnerRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AGL.SortCat.Models\AGL.SortCat.Models.csproj">
+      <Project>{60c88cd7-33d2-46cc-a335-b1b28dc01ea0}</Project>
+      <Name>AGL.SortCat.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AGL.SortCat.Service\AGL.SortCat.Service.csproj">
+      <Project>{3F0AE2D8-0227-44CD-A461-A421BFC7DE4A}</Project>
+      <Name>AGL.SortCat.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

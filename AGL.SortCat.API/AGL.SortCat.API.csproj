@@ -113,7 +113,7 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CatController.cs" />
+    <Compile Include="Controllers\OwnerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,6 +131,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AGL.SortCat.Models\AGL.SortCat.Models.csproj">
+      <Project>{60c88cd7-33d2-46cc-a335-b1b28dc01ea0}</Project>
+      <Name>AGL.SortCat.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AGL.SortCat.Repository\AGL.SortCat.Repository.csproj">
+      <Project>{d3733e43-3ab8-4df7-9816-394e811ea309}</Project>
+      <Name>AGL.SortCat.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AGL.SortCat.Service\AGL.SortCat.Service.csproj">
+      <Project>{3f0ae2d8-0227-44cd-a461-a421bfc7de4a}</Project>
+      <Name>AGL.SortCat.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

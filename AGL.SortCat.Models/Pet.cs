@@ -2,7 +2,7 @@
 
 namespace AGL.SortCat.Models
 {
-    class Pet
+    public class Pet
     {
         [JsonProperty("type")]
         public string Type { get; set; }
