@@ -1,4 +1,5 @@
-﻿using AGL.SortCat.Models;
+﻿using AGL.Sortcat.Utility;
+using AGL.SortCat.Models;
 using AGL.SortCat.Service;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace AGL.SortCat.Repository
                     .Select(p => new PetGroup
                     {
                         GroupName = p.Key,
-                        PetNames = p.SelectMany(po => po.Pets)
+                        PetNames = p.SelectManyExceptNull(po => po.Pets)
                         .Where(c => petType == c.Type)
                         .Select(c => c.Name)
                         .Distinct()

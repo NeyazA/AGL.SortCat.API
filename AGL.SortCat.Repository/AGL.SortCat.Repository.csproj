@@ -55,6 +55,10 @@
       <Project>{3F0AE2D8-0227-44CD-A461-A421BFC7DE4A}</Project>
       <Name>AGL.SortCat.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AGL.Sortcat.Utility\AGL.Sortcat.Utility.csproj">
+      <Project>{D95789A0-7702-45A2-9D31-EE06FC5E12D0}</Project>
+      <Name>AGL.Sortcat.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

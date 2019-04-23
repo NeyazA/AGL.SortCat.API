@@ -16,21 +16,10 @@ namespace AGL.SortCat.API.Controllers
         {
             this.OwnerRepo = OwnerRepo;
         }
-
-        // GET: api/Owner
-        //public IEnumerable<string> Get()
-        //{
-        //    OwnerRepo.GetPetsByOwnerGender();
-        //}
-
-        //public IHttpActionResult Get()
-        //{
-        //    OwnerRepo.GetPetsByOwnerGender();
-        //}
-
         // GET: api/Owner
         public HttpResponseMessage GetPet()
         {
+
             var result = OwnerRepo.GetPetsByOwnerGender("CAT");
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
