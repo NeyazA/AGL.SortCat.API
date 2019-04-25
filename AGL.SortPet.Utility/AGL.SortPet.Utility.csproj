@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F0AE2D8-0227-44CD-A461-A421BFC7DE4A}</ProjectGuid>
+    <ProjectGuid>{987A847C-642D-41C9-834E-2AF80C51368B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AGL.SortCat.Service</RootNamespace>
-    <AssemblyName>AGL.SortCat.Service</AssemblyName>
+    <RootNamespace>AGL.SortPet.Utility</RootNamespace>
+    <AssemblyName>AGL.SortPet.Utility</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,12 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.2\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,19 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOwnerService.cs" />
-    <Compile Include="OwnerService.cs" />
+    <Compile Include="APIHandler.cs" />
+    <Compile Include="LinQUtility.cs" />
+    <Compile Include="Logging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AGL.SortCat.Models\AGL.SortCat.Models.csproj">
-      <Project>{60c88cd7-33d2-46cc-a335-b1b28dc01ea0}</Project>
-      <Name>AGL.SortCat.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AGL.SortPet.Utility\AGL.SortPet.Utility.csproj">
-      <Project>{987A847C-642D-41C9-834E-2AF80C51368B}</Project>
-      <Name>AGL.SortPet.Utility</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

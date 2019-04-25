@@ -1,5 +1,5 @@
-﻿using AGL.Sortcat.Utility;
-using AGL.SortCat.Repository;
+﻿using AGL.SortPet.Service;
+using AGL.SortPet.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +11,11 @@ namespace AGL.SortCat.API.Controllers
 {
     public class OwnerController : ApiController
     {
-        private IOwnerRepo OwnerRepo;
+        private IPetOwnerService petOwnerService;
 
-        public OwnerController(IOwnerRepo OwnerRepo)
+        public OwnerController(IPetOwnerService petOwnerService)
         {
-            this.OwnerRepo = OwnerRepo;
+            this.petOwnerService = petOwnerService;
         }
         // GET: api/Owner
 
@@ -26,7 +26,7 @@ namespace AGL.SortCat.API.Controllers
         {
             try
             {
-            var result = OwnerRepo.GetPetsByOwnerGender("Cat");
+            var result = petOwnerService.GetPetsByOwnerGender("Cat");
             Logging.Log(result.ToString());
             return Request.CreateResponse(HttpStatusCode.OK, result);
             }

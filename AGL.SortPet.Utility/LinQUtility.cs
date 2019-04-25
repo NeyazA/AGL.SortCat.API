@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AGL.Sortcat.Utility
+namespace AGL.SortPet.Utility
 {
     public static class LinQUtility
     {
@@ -14,6 +14,5 @@ namespace AGL.Sortcat.Utility
                 .Where(item => item != null)
                 .SelectMany(item => item);
         }
-
     }
 }

@@ -7,7 +7,7 @@ using AGL.SortCat.API.Controllers;
 namespace AGL.SortCat.API.Tests
 {
     [TestClass]
-    public class OwnerControllerTest
+    public class OwnerControlle1rTest
     {
         [TestMethod]
         public void GetPetTest()

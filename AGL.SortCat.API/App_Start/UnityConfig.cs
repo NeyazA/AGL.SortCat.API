@@ -1,7 +1,5 @@
-
-using AGL.Sortcat.Utility;
-using AGL.SortCat.Repository;
-using AGL.SortCat.Service;
+using AGL.SortPet.Repository;
+using AGL.SortPet.Service;
 using System;
 using System.Web.Http;
 using Unity;
@@ -18,8 +16,8 @@ namespace AGL.SortCat.API
             // register all your components with the container here
             // it is NOT necessary to register your controllers
             // e.g. container.RegisterType<ITestService, TestService>();
-            container.RegisterType<IOwnerService, OwnerService>();
-            container.RegisterType<IOwnerRepo, OwnerRepo>();
+            container.RegisterType<IPetOwnerRepo, PetOwnerRepo>();
+            container.RegisterType<IPetOwnerService, PetOwnerService>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
       

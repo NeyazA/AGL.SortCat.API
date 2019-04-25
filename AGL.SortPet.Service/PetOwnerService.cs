@@ -1,23 +1,26 @@
-﻿using AGL.SortCat.Models;
-using AGL.SortCat.Service;
+﻿using AGL.SortPet.Models;
+using AGL.SortPet.Repository;
 using AGL.SortPet.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace AGL.SortCat.Repository
+namespace AGL.SortPet.Service
 {
-    public class OwnerRepo:IOwnerRepo
+    public class PetOwnerService:IPetOwnerService
     {
-        private IOwnerService OwnerService;
-
-        public OwnerRepo(IOwnerService OwnerService)
+        private IPetOwnerRepo petOwnerRepo;
+        public PetOwnerService(IPetOwnerRepo petOwnerRepo)
         {
-            this.OwnerService = OwnerService;
+            this.petOwnerRepo = petOwnerRepo;
         }
+
         public IEnumerable<PetGroup> GetPetsByOwnerGender(string petType)
         {
             List<PetGroup> _result = null;
-            List<PetOwner> petOwners = this.OwnerService.GetAllOwners().ToList();
+            List<PetOwner> petOwners = this.petOwnerRepo.GetAllOwners().ToList();
             if (!string.IsNullOrWhiteSpace(petType) && petOwners.Count > 0)
             {
                 _result = new List<PetGroup>();

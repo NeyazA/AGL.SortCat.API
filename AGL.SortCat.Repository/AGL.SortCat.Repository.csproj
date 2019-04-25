@@ -51,13 +51,9 @@
       <Project>{60c88cd7-33d2-46cc-a335-b1b28dc01ea0}</Project>
       <Name>AGL.SortCat.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AGL.SortCat.Service\AGL.SortCat.Service.csproj">
-      <Project>{3F0AE2D8-0227-44CD-A461-A421BFC7DE4A}</Project>
-      <Name>AGL.SortCat.Service</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AGL.Sortcat.Utility\AGL.Sortcat.Utility.csproj">
-      <Project>{D95789A0-7702-45A2-9D31-EE06FC5E12D0}</Project>
-      <Name>AGL.Sortcat.Utility</Name>
+    <ProjectReference Include="..\AGL.SortPet.Utility\AGL.SortPet.Utility.csproj">
+      <Project>{987A847C-642D-41C9-834E-2AF80C51368B}</Project>
+      <Name>AGL.SortPet.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

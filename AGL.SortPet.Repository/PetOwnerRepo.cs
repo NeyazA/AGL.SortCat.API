@@ -1,14 +1,17 @@
-﻿using AGL.SortCat.Models;
+﻿using AGL.SortPet.Models;
 using AGL.SortPet.Utility;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace AGL.SortCat.Service
+namespace AGL.SortPet.Repository
 {
-    public class OwnerService: IOwnerService
+    public class PetOwnerRepo:IPetOwnerRepo
     {
         public IEnumerable<PetOwner> GetAllOwners()
         {
@@ -26,7 +29,7 @@ namespace AGL.SortCat.Service
                     return JsonConvert.DeserializeObject<List<PetOwner>>(response, settings);
                 }
             }
-           
+
             catch (Exception ex)
             {
                 Logging.HandleException(ex);
@@ -34,6 +37,4 @@ namespace AGL.SortCat.Service
             }
         }
     }
-
-    
 }
