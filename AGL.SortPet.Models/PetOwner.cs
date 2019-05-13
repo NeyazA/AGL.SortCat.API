@@ -9,13 +9,13 @@ namespace AGL.SortPet.Models
 {
     public class PetOwner
     {
-        [JsonProperty("name")]
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
         [JsonProperty("gender")]
         public string Gender { get; set; }
         [JsonProperty("age")]
         public int Age { get; set; }
-        [JsonProperty("pets")]
-        public List<Pet> Pets { get; set; }
+        [JsonProperty("pets", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Pet>Pets { get; set; }
     }
 }

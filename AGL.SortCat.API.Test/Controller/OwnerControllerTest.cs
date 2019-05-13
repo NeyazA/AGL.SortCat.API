@@ -1,28 +1,41 @@
 ﻿using AGL.SortCat.API.Controllers;
 using AGL.SortPet.Service;
 using NSubstitute;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AGL.SortCat.API.Test.Controller
 {
     public class OwnerControllerTest
     {
-        private readonly OwnerController ownerController;
+        private  OwnerController ownerController;
         private readonly IPetOwnerService petOwnerService;
 
         public OwnerControllerTest()
         {
             petOwnerService = Substitute.For<IPetOwnerService>();
+        }
+
+        public void GetPet_ReturnsData()
+        {
+            petOwnerService.GetPetsByOwnerGender("Cat");
+            //petOwnerService.GetPetsByOwnerGender(Arg.Any<string>).Returns();
             ownerController = new OwnerController(petOwnerService);
         }
 
-        public void GetPetReturnsData()
+        public void GetPet_nullpararmet()
+        {
+           //
+        }
+
+        public void GetPet_ReturnNull()
         {
             petOwnerService.GetPetsByOwnerGender("Cat");
+            //
+        }
+
+        public void GetPet_ReturnException()
+        {
+            //
         }
     }
 }

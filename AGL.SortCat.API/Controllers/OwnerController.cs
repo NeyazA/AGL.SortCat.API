@@ -27,6 +27,7 @@ namespace AGL.SortCat.API.Controllers
             try
             {
             var result = petOwnerService.GetPetsByOwnerGender("Cat");
+                //Enum to .....
             Logging.Log(result.ToString());
             return Request.CreateResponse(HttpStatusCode.OK, result);
             }

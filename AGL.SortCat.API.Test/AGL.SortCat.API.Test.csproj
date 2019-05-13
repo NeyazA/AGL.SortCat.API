@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" />
   <Import Project="..\packages\xunit.core.2.4.0\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.0\build\xunit.core.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -67,11 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\OwnerControllerTest.cs" />
+    <Compile Include="Mock\MockingClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\PetOwnerRepoTest.cs" />
     <Compile Include="Service\PetOwnerServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +109,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\xunit.core.2.4.0\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.0\build\xunit.core.props'))" />
     <Error Condition="!Exists('..\packages\xunit.core.2.4.0\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.0\build\xunit.core.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props'))" />
   </Target>
   <Import Project="..\packages\xunit.core.2.4.0\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.0\build\xunit.core.targets')" />
 </Project>
