@@ -2,7 +2,6 @@
 using AGL.SortPet.Service;
 using NSubstitute;
 
-
 namespace AGL.SortCat.API.Test.Controller
 {
     public class OwnerControllerTest
@@ -22,20 +21,6 @@ namespace AGL.SortCat.API.Test.Controller
             ownerController = new OwnerController(petOwnerService);
         }
 
-        public void GetPet_nullpararmet()
-        {
-           //
-        }
-
-        public void GetPet_ReturnNull()
-        {
-            petOwnerService.GetPetsByOwnerGender("Cat");
-            //
-        }
-
-        public void GetPet_ReturnException()
-        {
-            //
-        }
+       
     }
 }

@@ -11,33 +11,26 @@ namespace AGL.SortCat.API.Controllers
 {
     public class OwnerController : ApiController
     {
-        private IPetOwnerService petOwnerService;
-
+        private readonly IPetOwnerService petOwnerService;
         public OwnerController(IPetOwnerService petOwnerService)
         {
             this.petOwnerService = petOwnerService;
         }
-        // GET: api/Owner
-
         [HttpGet]
         [Route("api/petowner/")]
         public HttpResponseMessage GetPet()
-
         {
             try
             {
             var result = petOwnerService.GetPetsByOwnerGender("Cat");
-                //Enum to .....
             Logging.Log(result.ToString());
             return Request.CreateResponse(HttpStatusCode.OK, result);
             }
-
             catch (Exception ex)
             {
                 Logging.HandleException(ex);
                 throw;
             }
-
         }
     }
 }
