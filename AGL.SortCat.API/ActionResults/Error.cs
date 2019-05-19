@@ -6,14 +6,10 @@ using System.Web;
 namespace AGL.SortCat.API.ActionResults
 {
     public class Error
-    {
-      
-
-
+    { 
         public Error(string message) : this(message, null)
         {
         }
-
         public Error(string message, InternalError internalError)
         {
             Message = message;

@@ -17,7 +17,6 @@ namespace AGL.SortCat.API.Test.Controller
         public void GetPet_ReturnsData()
         {
             petOwnerService.GetPetsByOwnerGender("Cat");
-            //petOwnerService.GetPetsByOwnerGender(Arg.Any<string>).Returns();
             ownerController = new OwnerController(petOwnerService);
         }
 

@@ -1,11 +1,8 @@
 ﻿using AGL.SortPet.Models;
 using AGL.SortPet.Repository;
 using AGL.SortPet.Utility;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AGL.SortPet.Service
 {

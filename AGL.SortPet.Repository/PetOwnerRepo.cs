@@ -4,10 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AGL.SortPet.Repository
 {
@@ -29,7 +26,6 @@ namespace AGL.SortPet.Repository
                     return JsonConvert.DeserializeObject<List<PetOwner>>(response, settings);
                 }
             }
-
             catch (Exception ex)
             {
                 Logging.HandleException(ex);
