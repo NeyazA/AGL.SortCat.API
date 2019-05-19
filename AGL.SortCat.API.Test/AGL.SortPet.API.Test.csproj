@@ -81,9 +81,9 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AGL.SortCat.API\AGL.SortCat.API.csproj">
+    <ProjectReference Include="..\AGL.SortCat.API\AGL.SortPet.API.csproj">
       <Project>{5A458681-1A30-4126-855E-679EBF1CBD58}</Project>
-      <Name>AGL.SortCat.API</Name>
+      <Name>AGL.SortPet.API</Name>
     </ProjectReference>
     <ProjectReference Include="..\AGL.SortCat.Models\AGL.SortCat.Models.csproj">
       <Project>{60C88CD7-33D2-46CC-A335-B1B28DC01EA0}</Project>

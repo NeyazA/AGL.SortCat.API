@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.SortCat.API", "AGL.SortCat.API\AGL.SortCat.API.csproj", "{5A458681-1A30-4126-855E-679EBF1CBD58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.SortPet.API", "AGL.SortCat.API\AGL.SortPet.API.csproj", "{5A458681-1A30-4126-855E-679EBF1CBD58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.SortCat.API.Test", "AGL.SortCat.API.Test\AGL.SortCat.API.Test.csproj", "{B14B1631-BDFC-435B-B138-C3A920B0A561}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.SortPet.API.Test", "AGL.SortCat.API.Test\AGL.SortPet.API.Test.csproj", "{B14B1631-BDFC-435B-B138-C3A920B0A561}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGL.SortPet.Service", "AGL.SortPet.Service\AGL.SortPet.Service.csproj", "{2D02B4C6-0AC2-4259-BAE7-35CF2DE1FEA3}"
 EndProject
